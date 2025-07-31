@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Jajanan Manado Detector",
+    "slug": "jajanan-manado-detector",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "jajanan-detector",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#667eea"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jajananmanado.detector",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Aplikasi ini memerlukan akses kamera untuk mendeteksi jajanan Manado",
+        "NSPhotoLibraryUsageDescription": "Aplikasi ini memerlukan akses galeri untuk memilih foto jajanan"
+      }
+    },
+    "android": {
+      "package": "com.jajananmanado.detector",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#667eea"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Izinkan $(PRODUCT_NAME) mengakses kamera untuk mendeteksi jajanan.",
+          "microphonePermission": "Izinkan $(PRODUCT_NAME) mengakses mikrofon untuk merekam video."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Aplikasi memerlukan akses ke galeri foto untuk memilih gambar jajanan."
+        }
+      ]
+    ]
+  }
+}
