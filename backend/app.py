@@ -6,6 +6,10 @@ from PIL import Image
 import io
 import os
 
+# # for mac
+# import ssl
+# ssl._create_default_https_context = ssl._create_unverified_context
+
 app = Flask(__name__)
 CORS(app)
 
